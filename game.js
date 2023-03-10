@@ -50,6 +50,18 @@ function loop() {
     if (down) {
         player.y += 5;
     }
+    if (player.y > 500) {
+        player.y = 0;
+    }
+    if (player.y < 0) {
+        player.y = 500;
+    }
+    if (player.x > 500) {
+        player.x = 0;
+    }
+    if (player.x < 0) {
+        player.x = 500;
+    }
     ctx.clearRect(0, 0, 500, 500);
     ctx.fillStyle = 'red';
     ctx.fillRect(player.x, player.y, player.width, player.height);
